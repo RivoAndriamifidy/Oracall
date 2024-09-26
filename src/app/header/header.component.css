@@ -1,0 +1,14 @@
+/* Style de base pour l'effet d'écriture */
+.typewriter-text {
+    font-size: 2rem; /* Taille du texte */
+    font-family: 'Courier New', Courier, monospace; /* Police type machine à écrire */
+    white-space: nowrap; /* Empêche la rupture de ligne automatique */
+    overflow: hidden; /* Cache le texte au début */
+    border-right: 2px solid black; /* Curseur de type machine à écrire */
+}
+
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; } /* Le curseur clignote entre transparent et noir */
+}

@@ -1,0 +1,54 @@
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.votreAllieContainer {
+    position: absolute;
+    top: 50px; /* Ajustez selon vos besoins pour la hauteur */
+    color: white;
+    background-color: rgba(64, 64, 64, 0.856); /* Fond légèrement transparent */
+    padding: 20px;
+    width: 120%;
+    z-index: 1000; /* Superpose sur l'image */
+    text-align: left;
+}
+
+.superposed-image {
+    position: relative;
+    z-index: 1; /* S'assure que l'image est derrière le texte */
+    width: 100%;
+    height: 400px; /* Ajustez la hauteur selon vos besoins */
+}
+
+.bienvenue {
+    font-size: 1.25rem;
+    font-style: italic;
+    line-height: 2;
+    margin-top: 249px;
+    text-align: justify;
+}
+
+@media (max-width: 992px) {
+    .votreAllieContainer {
+        position: static;
+        background-color: rgba(64, 64, 64, 1); /* Rendre le fond opaque sur mobile */
+        margin-bottom: 20px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .superposed-image {
+        margin-top: 20px;
+    }
+
+    .bienvenue {
+        font-size: 1.25rem;
+        font-style: italic;
+        line-height: 2;
+        margin-top: 40px;
+    }
+}

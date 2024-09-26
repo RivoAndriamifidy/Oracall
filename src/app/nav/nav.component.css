@@ -1,0 +1,98 @@
+.wrapper {
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px; /* Ajoute un peu de marge intérieure */
+    margin: 0 auto;  /* Centre l'élément horizontalement */
+}
+/* Style général du menu */
+.navbar-collapse {
+    position: fixed;
+    top: 0;
+    left: -100%; /* Masquer le menu hors de l'écran à gauche par défaut */
+    height: 100%;
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.9); /* Fond légèrement transparent */
+    transition: left 0.3s ease; /* Transition fluide */
+    z-index: 1000;
+}
+
+/* Appliquer la classe "show" pour rendre visible le menu */
+.navbar-collapse.show {
+    left: 0; /* Quand le menu est ouvert, il glisse depuis la gauche */
+}
+
+/* Bouton fermer dans le menu */
+.close-menu-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px; /* Bouton de fermeture à droite dans le menu */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Style du bouton hamburger */
+.navbar-toggler {
+    border: none;
+    background-color: rgba(255, 255, 255, 0.3); /* Bouton transparent */
+}
+
+/* Style de l'icône hamburger */
+.navbar-toggler-icon {
+    color: white;
+}
+
+/* Media query pour les grands écrans */
+@media (min-width: 992px) {
+    .navbar-collapse {
+        position: relative; /* Position normale sur grands écrans */
+        left: auto; /* Pas de glissement */
+        right: 0; /* Aligné à droite */
+        height: auto;
+        width: auto;
+        background-color: transparent; /* Pas de fond transparent */
+        transition: none; /* Pas de transition */
+    }
+
+    /* Masquer le bouton hamburger sur les grands écrans */
+    .navbar-toggler {
+        display: none;
+    }
+
+    /* Le bouton de fermeture n'est pas nécessaire sur les grands écrans */
+    .close-menu-btn {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row; /* Afficher les éléments en ligne sur les grands écrans */
+    }
+
+    .nav-item {
+        margin: 0 1rem; /* Espacement horizontal des éléments */
+    }
+}
+/* Logo par défaut */
+.logo-responsive {
+    width: 200px;
+    height: 60px;
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+/* Logo pour les tablettes */
+@media (max-width: 992px) {
+    .logo-responsive {
+        width: 150px;
+        height: 45px;
+    }
+}
+
+/* Logo pour les petits écrans (mobiles) */
+@media (max-width: 576px) {
+    .logo-responsive {
+        width: 120px;
+        height: 36px;
+    }
+}
