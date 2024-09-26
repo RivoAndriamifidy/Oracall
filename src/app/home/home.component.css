@@ -8,7 +8,7 @@
 
 .votreAllieContainer {
     position: absolute;
-    top: 50px; /* Ajustez selon vos besoins pour la hauteur */
+    top: 40px; /* Ajustez selon vos besoins pour la hauteur */
     color: white;
     background-color: rgba(64, 64, 64, 0.856); /* Fond légèrement transparent */
     padding: 20px;
@@ -21,14 +21,14 @@
     position: relative;
     z-index: 1; /* S'assure que l'image est derrière le texte */
     width: 100%;
-    height: 400px; /* Ajustez la hauteur selon vos besoins */
+    height: auto; /* Ajustez la hauteur selon vos besoins */
 }
 
 .bienvenue {
     font-size: 1.25rem;
     font-style: italic;
     line-height: 2;
-    margin-top: 249px;
+    margin-top: 200px;
     text-align: justify;
 }
 
@@ -52,3 +52,17 @@
         margin-top: 40px;
     }
 }
+
+/* Style de base pour l'effet d'écriture */
+.typewriter-text {
+    white-space: nowrap; /* Empêche la rupture de ligne automatique */
+    overflow: hidden; /* Cache le texte au début */
+    border-right: 2px solid black; /* Curseur de type machine à écrire */
+}
+
+/* Animation du curseur clignotant */
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: black; } /* Le curseur clignote entre transparent et noir */
+}
+
