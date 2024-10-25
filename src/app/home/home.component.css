@@ -66,3 +66,45 @@
     50% { border-color: black; } /* Le curseur clignote entre transparent et noir */
 }
 
+.margin-home{
+    margin-top: 2.5rem;
+}
+
+.text-decouvrez{
+    font-size: 2vh;
+}
+
+.text-container {
+    position: relative;
+    background-image: url('../../assets/table-call.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 2rem;
+    min-height: 400px; /* Ajustez la hauteur selon vos besoins */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-content {
+    position: relative;
+    z-index: 2;
+    text-align: center; /* Centrer le texte horizontalement */
+}
+
+.text-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Overlay sombre pour le contraste */
+    z-index: 1;
+}
+
+
+
+
